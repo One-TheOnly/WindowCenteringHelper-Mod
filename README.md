@@ -1,4 +1,4 @@
 # WindowCenteringHelper-Mod
 ## I hate change window size
 
-mod of WindowCenteringHelper[https://kamilszymborski.github.io/]
+mod of [WindowCenteringHelper](https://kamilszymborski.github.io)
