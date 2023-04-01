@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\OneDrive - 薅羊毛大学\下载\WindowCenteringHelper_new\Release\WindowCenteringHelper.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F798D749-59B1-4963-BCEE-F6E112F14F0D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>WindowCenteringHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.2.11.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gma.System.MouseKeyHook">
+      <HintPath>lib\Gma.System.MouseKeyHook.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>lib\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="KamilSzymborski\WindowToolkit\Interops.cs" />
+    <Compile Include="KamilSzymborski\WindowToolkit\WindowBox.cs" />
+    <Compile Include="KamilSzymborski\WindowToolkit\WindowKit.cs" />
+    <Compile Include="KamilSzymborski\WindowToolkit\WindowStyles.cs" />
+    <Compile Include="KamilSzymborski\WindowCenteringHelper\Core\CenteringHelper.cs" />
+    <Compile Include="KamilSzymborski\WindowCenteringHelper\Core\Helpers.cs" />
+    <Compile Include="KamilSzymborski\WindowCenteringHelper\Core\KeySquenceListener.cs" />
+    <Compile Include="KamilSzymborski\WindowCenteringHelper\Core\Services.cs" />
+    <Compile Include="KamilSzymborski\WindowCenteringHelper\Core\WindowListener.cs" />
+    <Compile Include="WindowCenteringHelper\Icon.cs" />
+    <Compile Include="WindowCenteringHelper\Config.cs" />
+    <Compile Include="WindowCenteringHelper\Images.cs" />
+    <Compile Include="WindowCenteringHelper\UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowCenteringHelper\Start.cs" />
+    <Compile Include="WindowCenteringHelper\Properties\Resources.cs" />
+    <Compile Include="WindowCenteringHelper\Properties\Settings.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WindowCenteringHelper\Images.resx" />
+    <EmbeddedResource Include="WindowCenteringHelper\Properties\Resources.resx" />
+    <EmbeddedResource Include="WindowCenteringHelper\UI.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="config.mini.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="config.exclude.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="config.small.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
